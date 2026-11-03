@@ -1,0 +1,45 @@
+.header {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    min-height: 68px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #101828;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #00aad4;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navLink {
+    color: #101828;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 250ms ease;
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+    color: #00aad4;
+}
