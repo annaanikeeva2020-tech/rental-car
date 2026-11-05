@@ -1,0 +1,112 @@
+.filters {
+    display: grid;
+    grid-template-columns: 252px 242px 394px 193px;
+    column-gap: 20px;
+    align-items: start;
+    width: 752px;
+    margin-bottom: 24px;
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.label {
+    color: #8d929a;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 143%;
+}
+
+.select {
+    width: 100%;
+    height: 54px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 16px;
+    background-color: #ffffff;
+    color: #101828;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    cursor: pointer;
+}
+
+.mileageGroup {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.mileageInput {
+    width: 50%;
+    min-width: 0;
+    height: 54px;
+    padding: 0 28px;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    color: #101828;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.mileageInput:first-child {
+    border-right: 1px solid #dadde1;
+}
+
+.mileageInput::placeholder {
+    color: #101828;
+    opacity: 1;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding-top: 28px;
+}
+
+.searchButton {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00aad4;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+}
+
+.searchButton:hover,
+.searchButton:focus {
+    background-color: #0095ba;
+}
+
+.clearButton {
+    align-self: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #8d929a;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+}

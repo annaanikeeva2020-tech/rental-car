@@ -3,6 +3,7 @@
 import { useCarsFilters } from "@/lib/hooks/useCarsFilters";
 import { useState } from "react";
 import type { CarsParams } from "@/lib/api/cars";
+import styles from "./Filters.module.css";
 
 interface FiltersProps {
   onSearch: (filters: CarsParams) => void;
@@ -10,6 +11,7 @@ interface FiltersProps {
 
 export default function Filters({ onSearch }: FiltersProps) {
   const { data, isPending, isError } = useCarsFilters();
+
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
   const [minMileage, setMinMileage] = useState("");
@@ -24,11 +26,14 @@ export default function Filters({ onSearch }: FiltersProps) {
   }
 
   return (
-    <div>
-      <div>
-        <label htmlFor="brand">Car brand</label>
+    <div className={styles.filters}>
+      <div className={styles.filterGroup}>
+        <label className={styles.label} htmlFor="brand">
+          Car brand
+        </label>
 
         <select
+          className={styles.select}
           id="brand"
           value={brand}
           onChange={(event) => setBrand(event.target.value)}
@@ -43,10 +48,13 @@ export default function Filters({ onSearch }: FiltersProps) {
         </select>
       </div>
 
-      <div>
-        <label htmlFor="price">Price per hour</label>
+      <div className={styles.filterGroup}>
+        <label className={styles.label} htmlFor="price">
+          Price / 1 hour
+        </label>
 
         <select
+          className={styles.select}
           id="price"
           value={price}
           onChange={(event) => setPrice(event.target.value)}
@@ -64,54 +72,60 @@ export default function Filters({ onSearch }: FiltersProps) {
         </select>
       </div>
 
-      <div>
-        <label htmlFor="minMileage">Car mileage / From</label>
-        <input
-          id="minMileage"
-          type="number"
-          placeholder="From"
-          value={minMileage}
-          onChange={(event) => setMinMileage(event.target.value)}
-        />
+      <div className={styles.filterGroup}>
+        <label className={styles.label}>Car mileage / km</label>
+
+        <div className={styles.mileageGroup}>
+          <input
+            className={styles.mileageInput}
+            id="minMileage"
+            type="number"
+            placeholder="From"
+            value={minMileage}
+            onChange={(event) => setMinMileage(event.target.value)}
+          />
+
+          <input
+            className={styles.mileageInput}
+            id="maxMileage"
+            type="number"
+            placeholder="To"
+            value={maxMileage}
+            onChange={(event) => setMaxMileage(event.target.value)}
+          />
+        </div>
       </div>
 
-      <div>
-        <label htmlFor="maxMileage">Car mileage / To</label>
-        <input
-          id="maxMileage"
-          type="number"
-          placeholder="To"
-          value={maxMileage}
-          onChange={(event) => setMaxMileage(event.target.value)}
-        />
+      <div className={styles.actions}>
+        <button
+          className={styles.searchButton}
+          type="button"
+          onClick={() =>
+            onSearch({
+              brand: brand || undefined,
+              price: price ? Number(price) : undefined,
+              minMileage: minMileage ? Number(minMileage) : undefined,
+              maxMileage: maxMileage ? Number(maxMileage) : undefined,
+            })
+          }
+        >
+          Search
+        </button>
+
+        <button
+          className={styles.clearButton}
+          type="button"
+          onClick={() => {
+            setBrand("");
+            setPrice("");
+            setMinMileage("");
+            setMaxMileage("");
+            onSearch({});
+          }}
+        >
+          Clear filters
+        </button>
       </div>
-
-      <button
-        type="button"
-        onClick={() =>
-          onSearch({
-            brand: brand || undefined,
-            price: price ? Number(price) : undefined,
-            minMileage: minMileage ? Number(minMileage) : undefined,
-            maxMileage: maxMileage ? Number(maxMileage) : undefined,
-          })
-        }
-      >
-        Search
-      </button>
-
-      <button
-        type="button"
-        onClick={() => {
-          setBrand("");
-          setPrice("");
-          setMinMileage("");
-          setMaxMileage("");
-          onSearch({});
-        }}
-      >
-        Clear filters
-      </button>
     </div>
   );
 }
