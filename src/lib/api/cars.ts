@@ -59,3 +59,28 @@ export async function getCarsFilters() {
 
   return response.data;
 }
+
+
+export async function getCar(id: string) {
+  const response = await api.get<Car>(`/cars/${id}`);
+
+  return response.data;
+}
+
+export interface BookingRequest {
+  name: string;
+  email: string;
+  comment: string;
+}
+
+export async function sendBookingRequest(
+  carId: string,
+  data: BookingRequest,
+) {
+  const response = await api.post(
+    `/cars/${carId}/booking-requests`,
+    data,
+  );
+
+  return response.data;
+}
