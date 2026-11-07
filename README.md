@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RentalCar
 
-## Getting Started
+**RentalCar** — це вебзастосунок для оренди автомобілів, який дозволяє переглядати доступні автомобілі, шукати та фільтрувати транспортні засоби, ознайомлюватися з детальною інформацією про автомобіль і надсилати заявки на бронювання.
 
-First, run the development server:
+## Можливості проєкту
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Головна сторінка** — знайомство з сервісом оренди автомобілів.
+- **Каталог автомобілів** — перегляд доступних для оренди автомобілів.
+- **Фільтрація** — пошук автомобілів за маркою, ціною оренди та пробігом.
+- **Сторінка автомобіля** — перегляд детальної інформації, характеристик, комплектації, умов оренди та місцезнаходження автомобіля.
+- **Форма бронювання** — надсилання заявки на оренду обраного автомобіля.
+- **Валідація форми** — перевірка обов'язкових полів перед надсиланням заявки.
+- **Індикатор завантаження** — відображення процесу надсилання заявки.
+- **Інтеграція з API** — отримання даних про автомобілі та надсилання заявок на бронювання через сервер.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Технології
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- Axios
+- TanStack Query
+- React Icons
+- ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Встановлення та запуск
 
-## Learn More
+### Вимоги
 
-To learn more about Next.js, take a look at the following resources:
+Для запуску проєкту необхідно встановити Node.js та npm.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Інструкція
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Клонуйте репозиторій:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/annaanikeeva2020-tech/rental-car.git
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Перейдіть до папки проєкту:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   cd rental-car
+   ```
+
+3. Встановіть залежності:
+
+   ```bash
+   npm install
+   ```
+
+4. Запустіть локальний сервер розробки:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Відкрийте у браузері адресу:
+
+   http://localhost:3000
+
+## API
+
+У проєкті використовується GoIT Car Rental API для отримання інформації про автомобілі та надсилання заявок на бронювання.
+
+Документація API: https://car-rental-api.goit.study/api-docs/
+
+## Автор
+
+**Ганна Анікєєва**
+
+GitHub: [annaanikeeva2020-tech](https://github.com/annaanikeeva2020-tech)
+
+
+
