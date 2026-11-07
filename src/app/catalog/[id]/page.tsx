@@ -35,7 +35,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
             height={512}
             priority
           />
-          <BookingForm />
+          <BookingForm carId={car.id} />
         </div>
 
         {/* Права колонка */}
