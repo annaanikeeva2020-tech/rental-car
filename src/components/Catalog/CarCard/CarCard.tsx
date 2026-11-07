@@ -17,6 +17,7 @@ export default function CarCard({ car }: CarCardProps) {
         height={268}
         unoptimized
         className={styles.image}
+        priority
       />
 
       <div className={styles.info}>

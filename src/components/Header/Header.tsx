@@ -8,7 +8,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const isHomePage = pathname === "/";
-  const isCatalogPage = pathname.startsWith("/catalog");
+  const isCatalogPage = pathname === "/catalog";
 
   return (
     <header className={styles.header}>

@@ -37,7 +37,7 @@
 .icon {
     width: 16px;
     height: 16px;
-    color: #8d929a;
+    color: #101828;
     flex-shrink: 0;
     vertical-align: middle;
 }
@@ -52,15 +52,16 @@
     margin: 0;
     color: #101828;
     font-family: "Manrope", sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 120%;
+    line-height: 32px;
 }
 
 .titleRow span {
     color: #8d929a;
-    font-size: 20px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
 }
 
 .location {
@@ -69,21 +70,59 @@
     gap: 8px;
     margin: 8px 0 0;
     color: #101828;
-    font-size: 20px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
 }
 
 .price {
-    margin: 20px 0 0;
+    margin: 16px 0 0;
     color: #00aad4;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 125%;
+    line-height: 32px;
 }
 
 .description {
-    margin: 40px 0 84px;
+    margin: 32px 0 68px;
     color: #101828;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.infoSection h2 {
+    margin: 0;
+    color: #101828;
+    font-family: "Manrope", sans-serif;
     font-size: 20px;
-    line-height: 130%;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #101828;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    margin: 24px 0;
+    border: none;
+    background-color: #dadde1;
 }

@@ -33,6 +33,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
             alt={`${car.brand} ${car.model}`}
             width={640}
             height={512}
+            priority
           />
           <BookingForm />
         </div>
